@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #8c8c8c;
+}
+
+h2 {
+    color: #000000;
+    text-align: center;
+}
+
+.settings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.settings-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3cb929;
+}
+
+#reset-settings {
+    background-color: #000000;
+}
+
+#reset-settings:hover {
+    background-color: #c0392b;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.info-item {
+    font-weight: bold;
+}
+
+#game-board {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card.flipped, .card.matched {
+    background: #fff;
+    color: #000000;
+}
+
+.card.matched {
+    background: #2ecc71;
+    color: white;
+    cursor: default;
+}
+
+.results {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    display: none;
+}
+
+.results h2 {
+    margin-top: 0;
+    color: #000000;
+}
+
+.results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.results th, .results td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.results th {
+    background-color: #000000;
+    color: white;
+}
+
+.results tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.winner {
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 15px;
+    font-size: 18px;
+}

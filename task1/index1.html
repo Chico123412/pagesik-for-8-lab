@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Pair Game</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="settings">
+    <h2>Налаштування гри</h2>
+    <div class="settings-group">
+        <label>Гравці:
+            <select id="players-count">
+                <option value="1">1 гравець</option>
+                <option value="2">2 гравці</option>
+            </select>
+        </label>
+    </div>
+    <div class="settings-group">
+        <input id="player1-name" placeholder="Ім'я гравця 1" value="Гравець 1" />
+        <input id="player2-name" placeholder="Ім'я гравця 2" value="Гравець 2" style="display:none" />
+    </div>
+    <div class="settings-group">
+        <label>Розмір поля:
+            <input type="number" id="rows" value="4" min="4" max="6"> x
+            <input type="number" id="cols" value="4" min="4" max="6">
+        </label>
+    </div>
+    <div class="settings-group">
+        <label>Складність:
+            <select id="difficulty">
+                <option value="easy">Easy (3 хв)</option>
+                <option value="normal">Normal (2 хв)</option>
+                <option value="hard">Hard (1 хв)</option>
+            </select>
+        </label>
+    </div>
+    <div class="settings-group">
+        <label>Раунди:
+            <input type="number" id="rounds" value="1" min="1" max="5" />
+        </label>
+    </div>
+    <div class="buttons">
+        <button id="reset-settings">Скинути налаштування</button>
+        <button id="start-game">Розпочати гру</button>
+        <button id="restart-game" style="display:none">Рестарт гри</button>
+    </div>
+</div>
+
+<div class="game-info">
+    <div class="info-item">Раунд: <span id="current-round">1</span>/<span id="total-rounds">1</span></div>
+    <div class="info-item">Гравець: <span id="current-player">-</span></div>
+    <div class="info-item">Таймер: <span id="timer">00:00</span></div>
+    <div class="info-item">Ходи: <span id="moves">0</span></div>
+</div>
+
+<div id="game-board"></div>
+
+<div id="results" class="results"></div>
+
+<script src="script1.js"></script>
+</body>
+</html>
